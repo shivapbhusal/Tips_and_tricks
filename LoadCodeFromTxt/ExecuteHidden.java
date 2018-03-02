@@ -17,8 +17,8 @@ public class ExecuteHidden extends ClassLoader
 			Constructor constructor=aClass.getConstructor(); 
 			Object myClassObject=constructor.newInstance(); 
 
-			Method method=aClass.getMethod("printHello"); 
-			method.invoke(myClassObject);  
+			Method method=aClass.getMethod("getString"); 
+			System.out.println(method.invoke(myClassObject));  
 			
 		}catch (ClassNotFoundException e)
 		{
